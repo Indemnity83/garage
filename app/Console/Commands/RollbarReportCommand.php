@@ -40,8 +40,8 @@ class RollbarReportCommand extends Command
     public function handle()
     {
         $response = Zttp::post(self::ROLLBAR_API.'/deploy', [
-            'access_token' => env('ROLLBAR_TOKEN'),
-            'environment' => env('APP_ENV'),
+            'access_token' => config('logging.channels.rollbar.access_token'),
+            'environment' => config('app.env'),
             'revision' => $this->argument('revision'),
             'rollbar_username' => $this->option('username'),
             'local_username' => $this->option('localuser'),
