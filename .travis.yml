@@ -1,0 +1,19 @@
+language: php
+
+php:
+  - 7.1
+  - 7.2
+  - 7.3
+
+cache:
+  directories:
+  - $HOME/.composer/cache
+  - $HOME/.php-cs-fixer
+  - $HOME/.local
+
+before_script:
+  - composer install --no-interaction
+
+script:
+  - vendor/bin/phpunit
+  - vendor/bin/php-cs-fixer fix -v --diff --dry-run
