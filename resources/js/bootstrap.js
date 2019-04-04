@@ -54,3 +54,13 @@ if (token) {
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     encrypted: true
 // });
+
+$(document).ready(function(){
+    // store the currently selected tab in the hash value
+    $('a[data-toggle="pill"]').on('shown.bs.tab', function (e) {
+        location.replace($(e.target).attr("href"));
+    });
+
+    // switch to the currently selected tab when loading the page
+    $('.nav-pills a[href="' + window.location.hash + '"]').tab('show');
+});

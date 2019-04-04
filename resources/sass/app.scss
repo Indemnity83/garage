@@ -3,12 +3,31 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
 // Variables
-@import 'variables';
+@import '~bootswatch/dist/flatly/variables';
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
-.navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+// Bootswatch theme main CSS files
+@import '~bootswatch/dist/flatly/bootswatch';
+
+.nav-pills {
+    .nav-link {
+        color: $secondary;
+        font-size: $h5-font-size;
+        padding: 0.5em 1em;
+
+        svg {
+            opacity: 0.5;
+        }
+    }
+
+    .nav-link:hover {
+        color: $primary;
+    }
+
+    .nav-link.active {
+        color: $primary;
+        background-color: transparent;
+    }
 }
