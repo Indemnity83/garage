@@ -1,10 +1,11 @@
 <?php
 
-/**
- * Laravel - A PHP Framework For Web Artisans
+/*
+ * Garage -- A code kata for the automobile owner
  *
- * @package  Laravel
- * @author   Taylor Otwell <taylor@laravel.com>
+ * Copyright (C) 2019 Kyle Klaus <kklaus@indemnity83.com>
+ *
+ * This software may be modified and distributed under the terms of the MIT license.  See the LICENSE file for details.
  */
 
 $uri = urldecode(
