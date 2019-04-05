@@ -8,6 +8,10 @@
  * This software may be modified and distributed under the terms of the MIT license.  See the LICENSE file for details.
  */
 
-Route::get('/{any}', function () {
-    return view('app');
-})->where('any', '.*');
+use Faker\Generator as Faker;
+
+$factory->define(App\Vehicle::class, function (Faker $faker) {
+    return [
+        //
+    ];
+});
