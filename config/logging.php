@@ -1,5 +1,13 @@
 <?php
 
+/*
+ * Garage -- A code kata for the automobile owner
+ *
+ * Copyright (C) 2019 Kyle Klaus <kklaus@indemnity83.com>
+ *
+ * This software may be modified and distributed under the terms of the MIT license.  See the LICENSE file for details.
+ */
+
 use Monolog\Handler\StreamHandler;
 use Monolog\Handler\SyslogUdpHandler;
 
@@ -36,7 +44,7 @@ return [
     'channels' => [
         'stack' => [
             'driver' => 'stack',
-            'channels' => ['daily','rollbar'],
+            'channels' => ['daily', 'rollbar'],
             'ignore_exceptions' => false,
         ],
 
@@ -98,7 +106,7 @@ return [
             'person_fn' => 'Auth::user',
             'capture_email' => true,
             'capture_username' => true,
-        ]
+        ],
     ],
 
 ];
