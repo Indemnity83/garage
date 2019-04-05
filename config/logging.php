@@ -36,7 +36,7 @@ return [
     'channels' => [
         'stack' => [
             'driver' => 'stack',
-            'channels' => ['daily','rollbar'],
+            'channels' => ['daily', 'rollbar'],
             'ignore_exceptions' => false,
         ],
 
@@ -98,7 +98,7 @@ return [
             'person_fn' => 'Auth::user',
             'capture_email' => true,
             'capture_username' => true,
-        ]
+        ],
     ],
 
 ];
